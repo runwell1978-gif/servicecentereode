@@ -1,7 +1,7 @@
 {
-  "name": "Service Center Coimbatore",
-  "short_name": "Service Center Coimbatore",
-  "description": "Local doorstep home appliance repair and maintenance services in Coimbatore, Tamil Nadu.",
+  "name": "Service Center Erode",
+  "short_name": "Service Center Erode",
+  "description": "Local doorstep home appliance repair and maintenance services in Erode, Tamil Nadu.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
