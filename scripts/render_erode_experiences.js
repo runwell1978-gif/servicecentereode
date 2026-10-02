@@ -18,7 +18,7 @@ function renderExperiencesSection(pageData, cards) {
             <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.4rem; flex-wrap: wrap; gap: 0.35rem;">
               <span style="font-size: 0.82rem; font-weight: 700; color: var(--accent-blue); text-transform: uppercase;">📍 ${c.locality}</span>
               <div style="display: flex; align-items: center; gap: 0.35rem;">
-                <span style="font-size: 0.72rem; background: #fef3c7; color: #92400e; padding: 0.15rem 0.45rem; border-radius: 4px; font-weight: 600;">★ ${c.rating}/10 Resolution Rating</span>
+                <span style="font-size: 0.72rem; background: #fef3c7; color: #92400e; padding: 0.15rem 0.45rem; border-radius: 4px; font-weight: 600;">★ ${c.rating}/10 Customer Rating</span>
                 <span style="font-size: 0.72rem; background: #e0f2fe; color: #0369a1; padding: 0.15rem 0.45rem; border-radius: 4px; font-weight: 600;">Doorstep Fix</span>
               </div>
             </div>
@@ -32,7 +32,7 @@ function renderExperiencesSection(pageData, cards) {
     <div class="container">
       <div class="section-header">
         <h2>${mainTitle}</h2>
-        <p>Authentic doorstep troubleshooting situations handled by our local technicians across Erode neighborhoods.</p>
+        <p>Real doorstep service situations handled by our local technicians across Erode neighborhoods.</p>
       </div>
       <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
 ${cardsHtml}
