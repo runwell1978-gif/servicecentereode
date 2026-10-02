@@ -1,35 +1,57 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0f172a"/>
-      <stop offset="100%" stop-color="#0a1e38"/>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a192f"/>
+      <stop offset="100%" stop-color="#112240"/>
     </linearGradient>
-    <linearGradient id="orange" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ff7700"/>
+    <linearGradient id="roofGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+    <linearGradient id="gearGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fb923c"/>
       <stop offset="100%" stop-color="#ea580c"/>
     </linearGradient>
-    <filter id="glow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.35"/>
+    <filter id="badgeShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.4"/>
     </filter>
   </defs>
 
-  <!-- Dark Navy Squircle Base -->
-  <rect width="512" height="512" rx="116" fill="url(#bg)"/>
+  <!-- Base Dark Squircle -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)"/>
+  <rect x="14" y="14" width="484" height="484" rx="100" fill="none" stroke="#38bdf8" stroke-width="6" stroke-opacity="0.35"/>
 
-  <!-- Orange House Silhouette -->
-  <!-- Roof Peak at 256, 88. Base corners at 120,424 and 392,424 -->
-  <path d="M 256 80 L 436 226 C 444 233 440 244 430 244 L 396 244 L 396 414 C 396 426 386 436 374 436 L 138 436 C 126 436 116 426 116 414 L 116 244 L 82 244 C 72 244 68 233 76 226 Z" fill="url(#orange)" filter="url(#glow)"/>
+  <!-- Main Home Service Symbol -->
+  <g filter="url(#badgeShadow)">
+    <!-- House Outline / Gable Roof (Bold, High-Contrast) -->
+    <path d="M 256 52 L 442 198 C 452 206 446 220 434 220 L 396 220 L 396 424 C 396 436 386 446 374 446 L 138 446 C 126 446 116 436 116 424 L 116 220 L 78 220 C 66 220 60 206 70 198 Z" fill="#0f2744" stroke="url(#roofGrad)" stroke-width="24" stroke-linejoin="round"/>
 
-  <!-- Navy Portal / Hearth -->
-  <path d="M 256 168 L 344 240 L 344 384 C 344 390 339 396 333 396 L 179 396 C 173 396 168 390 168 384 L 168 240 Z" fill="#0a1e38"/>
+    <!-- Central Mechanical Gear (Appliance Service) -->
+    <g transform="translate(256, 312)">
+      <!-- 8 Outer Gear Cogs -->
+      <path d="
+        M -24 -102 L 24 -102 L 30 -76 L 56 -66 L 78 -84 L 112 -50 L 94 -28 L 104 -2 L 130 4 L 130 52 L 104 58 L 94 84 L 112 106 L 78 140 L 56 122 L 30 132 L 24 158 L -24 158 L -30 132 L -56 122 L -78 140 L -112 106 L -94 84 L -104 58 L -130 52 L -130 4 L -104 -2 L -94 -28 L -112 -50 L -78 -84 L -56 -66 L -30 -76 Z"
+        fill="url(#gearGrad)"/>
 
-  <!-- White Wrench Service Symbol at 45 Degrees -->
-  <!-- Center of wrench shaft roughly 256, 288 -->
-  <g transform="translate(256, 282) rotate(-45) translate(-256, -282)" fill="#ffffff">
-    <!-- Wrench Head Open Jaw -->
-    <path d="M 256 182 C 228 182 208 202 208 228 C 208 242 214 254 224 262 L 244 262 L 244 336 C 244 344 250 350 258 350 C 266 350 272 344 272 336 L 272 262 L 292 262 C 302 254 308 242 308 228 C 308 202 288 182 256 182 Z M 256 204 L 270 226 L 242 226 Z"/>
-    <!-- Closed Ring Spanner Head on bottom -->
-    <circle cx="258" cy="358" r="26" fill="#ffffff"/>
-    <circle cx="258" cy="358" r="14" fill="#0a1e38"/>
+      <!-- Inner Gear Well -->
+      <circle r="72" fill="#0a192f"/>
+
+      <!-- Diagonal Service Wrench at 45 Degrees -->
+      <g transform="rotate(-45)">
+        <!-- Wrench Shaft -->
+        <rect x="-14" y="-80" width="28" height="160" rx="14" fill="#ffffff"/>
+        
+        <!-- Top Open Wrench Head -->
+        <path d="M -40 -76 C -40 -110 -14 -132 0 -132 C 14 -132 40 -110 40 -76 C 40 -60 30 -50 20 -44 L -20 -44 C -30 -50 -40 -60 -40 -76 Z" fill="#ffffff"/>
+        <path d="M -16 -76 L 0 -98 L 16 -76 L 10 -54 L -10 -54 Z" fill="#0a192f"/>
+
+        <!-- Bottom Ring Spanner Head -->
+        <circle cx="0" cy="80" r="34" fill="#ffffff"/>
+        <circle cx="0" cy="80" r="18" fill="#0a192f"/>
+      </g>
+
+      <!-- Center Power Spark Dot -->
+      <circle r="14" fill="#38bdf8"/>
+    </g>
   </g>
 </svg>
