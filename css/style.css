@@ -502,9 +502,29 @@ button, input, select, textarea {
   margin-bottom: 1.5rem;
 }
 
+/* Hero Visual Graphic */
+.hero-visual-card {
+  margin: 1.1rem 0 1.35rem;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(10, 30, 56, 0.08);
+  border: 1px solid var(--border-color);
+  background: #ffffff;
+  display: block;
+}
+
+.hero-visual-img {
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
 /* Tanglish Accent Prompt Box */
 .tanglish-prompt-box,
-.tanglish-intro-box {
+.tanglish-intro-box,
+.tanglish-quick-box {
   background-color: #fffbeb;
   border-left: 4px solid #f59e0b;
   padding: 0.85rem 1.1rem;
@@ -518,10 +538,13 @@ button, input, select, textarea {
 }
 
 .tanglish-prompt-box svg,
-.tanglish-intro-box svg {
-  width: 18px;
-  height: 18px;
-  fill: #d97706;
+.tanglish-intro-box svg,
+.tanglish-quick-box svg {
+  width: 18px !important;
+  height: 18px !important;
+  max-width: 18px !important;
+  max-height: 18px !important;
+  fill: #d97706 !important;
   flex-shrink: 0;
   margin-top: 2px;
 }

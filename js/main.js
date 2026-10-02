@@ -1,6 +1,6 @@
 /**
- * Main Interactive Script for servicecenterkanyakumari.com
- * Handles mobile menu, 50% scroll floating triggers, booking modal, and FAQ accordion.
+ * Main Interactive Script for servicecentercoimbatore.com
+ * Handles mobile menu, floating triggers, booking modal, and FAQ accordion.
  */
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -96,7 +96,7 @@ function initQuickBookingForm() {
       const issueInput = form.querySelector("[name='issue']");
 
       const appliance = applianceSelect ? applianceSelect.value : "Home Appliance";
-      const locality = localitySelect ? localitySelect.value : "Kanyakumari";
+      const locality = localitySelect ? localitySelect.value : "Coimbatore";
       const phone = phoneInput ? phoneInput.value.trim() : "";
       const issue = issueInput ? issueInput.value.trim() : "Inspection & Repair required";
 
@@ -106,7 +106,7 @@ function initQuickBookingForm() {
         return;
       }
 
-      const msg = `Hello Service Center Kanyakumari,\n\nI need service for:\n* Appliance: ${appliance}\n* Issue: ${issue}\n* My Location: ${locality}, Kanyakumari\n* Contact Phone: ${phone}\n\nPlease let me know technician visit availability and service details.`;
+      const msg = `Hello Service Center Coimbatore,\n\nI need service for:\n* Appliance: ${appliance}\n* Issue: ${issue}\n* My Location: ${locality}, Coimbatore\n* Contact Phone: ${phone}\n\nPlease let me know technician visit availability and service details.`;
       
       const encodedMsg = encodeURIComponent(msg);
       const waPhone = typeof SITE_CONFIG !== "undefined" && SITE_CONFIG.whatsappNumber ? SITE_CONFIG.whatsappNumber : "919211512088";
